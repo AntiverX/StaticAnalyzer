@@ -218,7 +218,12 @@ def pdf(request, api=False):
                     ],
                     'no-outline': None
                 }
-                pdf_dat = pdfkit.from_string(html, False, options=options)
+
+                BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+                path_wk = os.path.join(BASE_DIR, 'windows/wkhtmltopdf/wkhtmltopdf.exe')
+                # path_wk = r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe'  # 安装位置
+                config = pdfkit.configuration(wkhtmltopdf=path_wk)
+                pdf_dat = pdfkit.from_string(html, False, options=options, configuration=config)
                 if api:
                     return {"pdf_dat": pdf_dat}
                 else:
