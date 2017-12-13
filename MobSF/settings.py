@@ -44,7 +44,7 @@ MobSF_HOME = utils.getMobSFHome(USE_HOME)
 # Logs Directory
 LOG_DIR = os.path.join(MobSF_HOME, 'logs/')
 # Download Directory
-DWD_DIR = os.path.join(MobSF_HOME, '/downloads/')
+DWD_DIR = os.path.join(MobSF_HOME, 'downloads/')
 # Screenshot Directory
 SCREEN_DIR = os.path.join(MobSF_HOME, 'downloads/screen/')
 # Upload Directory

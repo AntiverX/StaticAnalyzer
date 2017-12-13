@@ -97,3 +97,8 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+#custom
+db.sqlite3
+uploads/
+downloads/
